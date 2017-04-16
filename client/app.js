@@ -39,21 +39,21 @@ myApp.config(function($routeProvider){
 		templateUrl: 'views/user/edit_user.html'
 	})
 
-	.when('/comptes', {
-		controller:'ComptesController',
-		templateUrl: 'views/compte/comptes.html'
+	.when('/categories', {
+		controller:'CategoriesController',
+		templateUrl: 'views/categorie/categories.html'
 	})
-	.when('/comptes/details/:id',{
-		controller:'ComptesController',
-		templateUrl: 'views/compte/compte_details.html'
+	.when('/categories/details/:id',{
+		controller:'CategoriesController',
+		templateUrl: 'views/categorie/categorie_details.html'
 	})
-	.when('/comptes/add',{
-		controller:'ComptesController',
-		templateUrl: 'views/compte/add_compte.html'
+	.when('/categories/add',{
+		controller:'CategoriesController',
+		templateUrl: 'views/categorie/add_categorie.html'
 	})
-	.when('/comptes/edit/:id',{
-		controller:'ComptesController',
-		templateUrl: 'views/compte/edit_compte.html'
+	.when('/categories/edit/:id',{
+		controller:'CategoriesController',
+		templateUrl: 'views/categorie/edit_categorie.html'
 	})
 
 	.when('/login',{
@@ -66,8 +66,8 @@ myApp.config(function($routeProvider){
 		templateUrl: 'views/user/add_user.html'
 	})
 	.when('/virement',{
-		controller:'ComptesController',
-		templateUrl: 'views/compte/virement.html'
+		controller:'CategoriesController',
+		templateUrl: 'views/categorie/virement.html'
 	})
 	.otherwise({
 		redirectTo: '/'

@@ -19,12 +19,12 @@ var mongo = require('mongodb');
 app.use(express.static(__dirname+'/client'));
 app.use(bodyParser.json());
 
-Compte =require('./models/compte');
+Categorie =require('./models/categorie');
 Article =require('./models/article');
 User =require('./models/user');
 
 // Connect to Mongoose
-mongoose.connect('mongodb://localhost/kcbankdb');
+mongoose.connect('mongodb://localhost/easy-electronics');
 var db = mongoose.connection;
 
 // BodyParser Middleware
@@ -80,52 +80,52 @@ app.get('/', (req, res) => {
 	res.send('Please use /articles or /users');
 });
 
-app.get('/api/comptes', (req, res) => {
-	Compte.getComptes((err, comptes) => {
+app.get('/api/categories', (req, res) => {
+	Categorie.getCategories((err, categories) => {
 		if(err){
 			throw err;
 		}
-		res.json(comptes);
+		res.json(categories);
 	});
 });
 
-app.get('/api/comptes/:_id', (req, res) => {
-	Compte.getCompteById(req.params._id, (err, compte) => {
+app.get('/api/categories/:_id', (req, res) => {
+	Categorie.getCategorieById(req.params._id, (err, categorie) => {
 		if(err){
 			throw err;
 		}
-		res.json(compte);
+		res.json(categorie);
 	});
 });
 
-app.post('/api/comptes', (req, res) => {
-	var compte = req.body;
-	Compte.addCompte(compte, (err, compte) => {
+app.post('/api/categories', (req, res) => {
+	var categorie = req.body;
+	Categorie.addCategorie(categorie, (err, categorie) => {
 		if(err){
 			throw err;
 		}
-		res.json(compte);
+		res.json(categorie);
 	});
 });
 
-app.put('/api/comptes/:_id', (req, res) => {
+app.put('/api/categories/:_id', (req, res) => {
 	var id = req.params._id;
-	var compte = req.body;
-	Compte.updateCompte(id, compte, {}, (err, compte) => {
+	var categorie = req.body;
+	Categorie.updateCategorie(id, categorie, {}, (err, categorie) => {
 		if(err){
 			throw err;
 		}
-		res.json(compte);
+		res.json(categorie);
 	});
 });
 
-app.delete('/api/comptes/:_id', (req, res) => {
+app.delete('/api/categories/:_id', (req, res) => {
 	var id = req.params._id;
-	Compte.removeCompte(id, (err, compte) => {
+	Categorie.removeCategorie(id, (err, categorie) => {
 		if(err){
 			throw err;
 		}
-		res.json(compte);
+		res.json(categorie);
 	});
 });
 

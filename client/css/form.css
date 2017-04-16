@@ -63,7 +63,8 @@
     right: 0px;
 }
 .form-horizontal h1{
-    background: #22264b;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
     padding: 20px 0;
     font-size: 140%;
     font-weight: 300;

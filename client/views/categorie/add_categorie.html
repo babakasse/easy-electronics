@@ -1,0 +1,24 @@
+
+<div class="form-group">
+      <a class="btn btn-success" href="#/categories">Tous les categories</a>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Ajouter une categorie</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+      <form ng-submit="addCategorie()">
+        <div class="form-group">
+          <label>Nom de la categorie</label>
+          <input type="text" class="form-control" ng-model="categorie.nom" placeholder="Nom de la categorie">
+        </div>
+        <div class="col col-xs-6 text-right form-group">
+          <button type="submit" class="btn btn-success">Valider</button>
+       </div>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>

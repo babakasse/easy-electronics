@@ -50,3 +50,8 @@ img{width:100%;}
         border-top:0 none;
     }
 }
+
+.navbar .navbar-default{
+       background: #22264b;
+       color: #fff;
+}
