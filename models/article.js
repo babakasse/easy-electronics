@@ -16,6 +16,11 @@ const articleSchema = mongoose.Schema({
 	image_url:{
 		type: String
 	},
+	price: {
+		type: String,
+		default: "0.00",
+		required: true
+	},
 	create_date:{
 		type: Date,
 		default: Date.now
@@ -46,7 +51,8 @@ module.exports.updateArticle = (id, article, options, callback) => {
 		title: article.title,
 		description: article.description,
 		author: article.author,
-		image_url: article.image_url
+		image_url: article.image_url,
+		price : article.price
 	}
 	Article.findOneAndUpdate(query, update, options, callback);
 }

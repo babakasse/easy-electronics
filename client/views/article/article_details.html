@@ -1,4 +1,7 @@
-<a href="#/articles">Liste des articles</a>
+
+ <a class=" btn btn-success" href="#/articles">Liste des articles</a>
+<hr>
+
 <div class="panel panel-default" ng-init="getArticle()">
   <div class="panel-heading">
     <h3 class="panel-title">{{article.title}}</h3>
@@ -12,7 +15,8 @@
         <h4>Description</h4>
         </p>{{article.description}}</p>
         <ul class="list-group">
-          <li class="list-group-item"><h4>Auteur: </h4> {{article.author}}</li>
+          <li class="list-group-item">Publié par : {{article.author}}</li>
+          <li class="list-group-item">Prix : {{article.price}}  €</li>
         </ul>
       </div>
     </div>
@@ -20,6 +24,6 @@
 </div>
 
 <div class="pull-right">
-  <a href="#/articles/edit/{{article._id}}">Modifier</a> |  <a href="#" ng-click="removeArticle(article._id)">Supprimer</a>
+  <a class="btn btn-primary" href="#/articles/edit/{{article._id}}"> <em class="fa fa-pencil"></em> Modifier</a> |  <a href="#" class="btn btn-danger" ng-click="removeArticle(article._id)"><em class="fa fa-trash-o"></em>Supprimer</a>
 </div>
   

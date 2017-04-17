@@ -1,4 +1,6 @@
-<a href="#/users">Liste des clients</a>
+<a class=" btn btn-success" href="#/users">Liste des clients</a>
+<hr>
+
 <div class="panel panel-default" ng-init="getUser()">
   <div class="panel-heading">
     <h3 class="panel-title">{{user.prenom}} {{user.nom}}</h3>
@@ -24,5 +26,5 @@
 </div>
 
 <div class="pull-right">
-  <a href="#/users/edit/{{user._id}}">Modifier</a> |  <a href="#" ng-click="removeUser(user._id)">Delete</a>
+  <a  class="btn btn-primary" href="#/users/edit/{{user._id}}"> <em class="fa fa-pencil"></em> Modifier</a> |  <a class="btn btn-danger" href="#" ng-click="removeUser(user._id)"><em class="fa fa-trash-o"></em> Delete</a>
 </div>
