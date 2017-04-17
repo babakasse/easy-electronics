@@ -34,12 +34,6 @@ const userSchema = mongoose.Schema({
 	image_url:{
 		type: String
 	},
-	compte_courant:{
-		type: String
-	},
-	livret_a:{
-		type: String
-	},
 	create_date:{
 		type: Date,
 		default: Date.now
@@ -75,9 +69,7 @@ module.exports.updateUser = (id, user, options, callback) => {
 		email: user.email,
 		identifiant: user.identifiant,
         motdepasse:user.motdepasse,
-		image_url: user.image_url,
-		compte_courant: user.compte_courant,
-		livret_a : user.livret_a
+		image_url: user.image_url
 	}
 	User.findOneAndUpdate(query, update, options, callback);
 }

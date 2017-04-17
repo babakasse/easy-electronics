@@ -8,17 +8,17 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-4">
-        <img src="{{user.image_url}}">
+        <img src="{{user.image_url}}" class="img-responsive">
       </div>
       <div class="col-md-8">
         <ul class="list-group">
            <li class="list-group-item">Type : {{user.type}}</li>
           <li class="list-group-item">Sexe : {{user.sexe}}</li>
           <li class="list-group-item">Age : {{user.age}}</li>
-          <li class="list-group-item">N° de compte courant : {{user.compte_courant}}</li>
-           <li class="list-group-item">N° de compte Livret A : {{user.livret_a}}</li>
           <li class="list-group-item">Nom d'utilisateur : {{user.identifiant}}</li>
            <li class="list-group-item">Mot de passe : {{user.motdepasse}}</li>
+            <li class="list-group-item">Email : {{user.email}}</li>
+        </ul>
         </ul>
       </div>
     </div>
