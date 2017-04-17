@@ -4,33 +4,17 @@
       <form ng-submit="updateCategorie()" ng-init="getCategorie()" class="form-horizontal">
         <h1>Modification d'une Categorie</h1>
         <div class="form-group">
-          <label>Numero de categorie</label>
-          <input type="text" class="form-control" ng-model="categorie.numero" placeholder="Numero de categorie">
+          <label>Nom de la categorie</label>
+          <input type="text" class="form-control" ng-model="categorie.nom" placeholder="Nom de categorie">
         </div>
-      
-        <div class="form-group">
-          <label>Solde</label>
-          <input type="text" class="form-control" ng-model="categorie.solde" placeholder="Solde">
-        </div>
-        <div class="form-group">
-          <label>Plafond</label>
-          <textarea class="form-control" ng-model="categorie.plafond" placeholder="Plafond"></textarea>
-        </div>
-         <div class="form-group">
-          <label>Type de categorie</label>
-          <select ng-model="categorie.type" class="form-control">
-            <option value="courant">Courant</option>
-            <option value="livret a">Livret A</option>
-            <option value="epargne">Epargne</option>
-          </select>
-        </div>                
-        <div class="form-group">
-          <label>Propriétaire du categorie</label>
-          <input type="text" class="form-control" ng-model="categorie.proprietaire" placeholder="Proprietaire du categorie">
-        </div>
-         <div class="form-group">
-           <button type="submit" class="btn btn-default">Valider</button>
+    
+         <div class="form-group text-center">
+           <button type="submit" class="btn btn-primary"><em class="fa fa-check-square"></em> Valider</button>
          </div>
+         <div class="text-center">
+          <a class="btn btn-danger" href="#" ng-click="removeCategorie(categorie._id)"> <em class="fa fa-trash-o"></em> Supprimer cette Categorie</a>
+        </div>
       </form>
     </div>
 </div>
+
