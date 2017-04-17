@@ -9,10 +9,10 @@ const categorieSchema = mongoose.Schema({
 	create_date:{
 		type: Date,
 		default: Date.now
-	},
+	}
 });
 
-const Categorie = module.exports = mongoose.model('categorie', categorieSchema);
+const Categorie = module.exports = mongoose.model('Categorie', categorieSchema);
 
 // Get categories
 module.exports.getCategories = (callback, limit) => {
